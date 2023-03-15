@@ -1,0 +1,12 @@
+services:
+  rstudio:
+    image: rocker/verse:4.2.2
+    working_dir: /workspace
+    ports:
+      - "127.0.0.1:8787:8787/tcp"
+    environment:
+      - DISABLE_AUTH=true
+      - TZ=America/New_York
+    volumes:
+      - ./:/workspace
+      - ./workspace.sh:/etc/cont-init.d/03_workspace

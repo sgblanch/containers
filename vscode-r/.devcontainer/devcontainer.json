@@ -1,0 +1,23 @@
+{
+    "name": "rlang",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "R_VERSION": "4.2.2"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "r.bracketedPaste": true,
+                "r.lsp.enabled": true,
+                "r.rterm.linux": "/opt/radian/bin/radian"
+            },
+            "extensions": [
+                "visualstudioexptteam.vscodeintellicode",
+                "REditorSupport.r",
+                "RDebugger.r-debugger"
+            ]
+        }
+    }
+}
