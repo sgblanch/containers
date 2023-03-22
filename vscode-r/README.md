@@ -6,7 +6,12 @@
     - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
     - Other extensions automagically installed *inside* container by `devcontainer.json`
 
-## Here Be Dragons
+> ## Here Be \[Swamp] Dragons ##
+>
+> If everything isn't carefully positioned or if this hits an unexpected
+> bump, it may strip the plaster off of the walls and make a furious cup
+> of cat.
+
 - `.devcontainer/Dockerfile`
     - minimal-ish (contains `texlive`) R environment with all the goodies to interface with vscode
     - `renv` vs vscode

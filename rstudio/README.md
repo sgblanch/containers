@@ -2,7 +2,8 @@
 
 ## Unmodified `rocker/verse:4.2.2`
 
-- Must ship `workspace.sh` in addition to `docker-compose.yml`
+> ## Note ##
+> Must ship `workspace.sh` in addition to `docker-compose.yml`
 
 ```console
 $ docker compose up
@@ -19,12 +20,13 @@ renv::snapshot()
 
 ## Custom Image
 
-- Self-container if built container pushed to a registry
+> ## Note ##
+> Self-contained if built container pushed to a registry
 
 ```console
 $ docker pull rocker/verse:4.2.2
 $ docker build --progress=plain --build-arg R_VERSION=4.2.2 -t rstudio:custom .
-$ alias rstudio='docker run -tv "$(pwd):/workspace" -p 127.0.0.1:8787:8787 rstudio:custom'
+$ alias rstudio='docker run -tv "$(pwd):/workspace" -w /workspace -p 127.0.0.1:8787:8787 rstudio:custom'
 ```
 
 ```R
